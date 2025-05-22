@@ -20,13 +20,13 @@ public class UserController {
     }
 
     @GetMapping
-    @JsonView(Views.UserDetails.class)
+    @JsonView(Views.UserSummary.class)
     public List<User> getAllUsers() {
         return userService.findAll();
     }
 
     @GetMapping("/{id}")
-    @JsonView(Views.UserSummary.class)
+    @JsonView(Views.UserDetails.class)
     public User findUserById(@PathVariable Long id) {
         return userService.findById(id);
     }

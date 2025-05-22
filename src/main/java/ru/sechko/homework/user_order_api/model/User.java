@@ -28,6 +28,7 @@ public class User {
     @JsonView(Views.UserDetails.class)
     private List<Order> orders;
 
+
     public Long getId() {
         return id;
     }
